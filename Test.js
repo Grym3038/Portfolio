@@ -15,10 +15,10 @@ if (Total_vibes==20){
 } else {
     // not a good thing
     alert("the vibes arem't vibing")
-
+    location.reload()
 }
 
-console.log("Vibes: " + vibes + " Total Vibes: " + Total_vibes + " Wanted Vibes: 20"
+console.log("Vibes: " + vibes + '\n' + " Total Vibes: " + Total_vibes + '\n' + " Wanted Vibes: 20"
 
 
 )
