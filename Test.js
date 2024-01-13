@@ -14,7 +14,7 @@ if (Total_vibes==20){
 
 } else {
     // not a good thing
-    alert("the vibes arem't vibing")
+    alert("the vibes aren't vibing")
     location.reload()
 }
 
