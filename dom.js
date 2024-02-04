@@ -1,7 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-    
         var containerDiv = document.getElementById('container');
         var button = document.createElement('button');
         button.textContent = 'Toggle Colors';
