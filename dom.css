@@ -1,0 +1,18 @@
+
+        body {
+            background-color: #f0f0f0; /* Set your preferred body background color */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #container {
+            width: 80%;
+            outline: 2px solid #333; /* Set your preferred outline color */
+            padding: 20px;
+            text-align: center;
+            background-color: #fff; /* Set your preferred container background color */
+            color: #333; /* Set your preferred text color */
+        }
