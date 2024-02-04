@@ -1,5 +1,8 @@
 
-        // Step 5: Create a new variable for the container div
+document.addEventListener("DOMContentLoaded", function() {
+
+    
+    // Step 5: Create a new variable for the container div
         var containerDiv = document.getElementById('container');
 
         // Step 6: Utilize a loop to add new paragraphs to the container
@@ -35,3 +38,4 @@
 
             // Append the button to the container div
             containerDiv.appendChild(button);
+        });
