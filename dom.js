@@ -2,8 +2,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     
-    // Step 5: Create a new variable for the container div
         var containerDiv = document.getElementById('container');
+        var button = document.createElement('button');
+        button.textContent = 'Toggle Colors';
 
         // Step 6: Utilize a loop to add new paragraphs to the container
         for (var i = 0; i < 5; i++) {
