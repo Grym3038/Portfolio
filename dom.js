@@ -12,17 +12,26 @@
             containerDiv.appendChild(newParagraph);
         }
 
-        // Step 7: Create a function to change background colors
-        function changeColors() {
-            document.body.style.backgroundColor = '#b0e57c'; // Set your preferred body background color
-            containerDiv.style.backgroundColor = '#4285f4'; // Set your preferred container background color
-            containerDiv.style.color = '#fff'; // Set your preferred text color
-        }
+        // Set initial state (colors)
+            var isColorSet1 = true;
 
-        // Step 8: Create a button with onclick attribute
-        var button = document.createElement('button');
-        button.textContent = 'Change Colors';
-        button.onclick = changeColors;
+            // Function to toggle colors
+            function toggleColors() {
+                if (isColorSet1) {
+                    document.body.style.backgroundColor = '#4285f4';
+                    containerDiv.style.backgroundColor = '#fff';
+                    containerDiv.style.color = '#333';
+                } else {
+                    document.body.style.backgroundColor = '#f0f0f0';
+                    containerDiv.style.backgroundColor = '#fff';
+                    containerDiv.style.color = '#333';
+                }
 
-        // Append the button to the container div
-        containerDiv.appendChild(button);
+                isColorSet1 = !isColorSet1;
+            }
+
+            // Attach the toggleColors function to the button click event
+            button.onclick = toggleColors;
+
+            // Append the button to the container div
+            containerDiv.appendChild(button);
