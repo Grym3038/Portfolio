@@ -1,9 +1,6 @@
-class Example {
-    constructor(name) {
-        this.name = name;
-    }
+// Assuming lib_example.js has been loaded before this file
+const obj1 = new Example("Object 1");
+const obj2 = new Example("Object 2");
 
-    logName() {
-        console.log(this.name);
-    }
-}
+obj1.logName();
+obj2.logName();
