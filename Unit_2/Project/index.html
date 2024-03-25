@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JS/CSS Project</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  </head>
+  <body class="light">
+
+    <audio style="display: none;" controls loop id="myAudio">
+      <source src="audio2.mp3" type="audio/mp3">
+  </audio>
+  <audio style="display: none;" controls loop id="audio2">
+    <source src="angel.mp3" type="audio/mp3">
+</audio>
+<div class="header light">
+    <div class="subheader light">
+    <h1 id="header" class="light">Let there be light!!!
+    </h1>
+    <p id="text" class="light"> (holiness goes brr.) </p>
+  </div>
+    <button id="addButton" class="light">SUMMON MINION</button>
+    <button id="removeButton" class="light" >REMOVE MINION</button>
+    <button onclick="march()" id="marchBtn" class="light" style="display: none;">MARCH!!!</button>
+    <button onclick="themeChange()" id="marchBtn" class="light">Change Theme  </button>
+
+  </div>
+  <div id="minions-container" class="light">
+    
+    
+  </div>
+
+  <script src="index.js"></script>
+
+  </body>
+</html>

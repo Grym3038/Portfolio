@@ -1,0 +1,249 @@
+body.dark {
+    background-image: url(AdorableDapperGallowaycow-size_restricted.gif);
+    background-size: cover;
+    color: rgb(255, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  body.light {
+    background-image: url(heaven-light-background-free-video.jpg);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    text-shadow: black 0px 0px 50px;
+
+  }
+
+h1.dark, p.dark{
+  color: rgb(255, 16, 16);
+
+  text-shadow: black 0px 0px 20px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 0% ;
+
+}
+p.light {
+  font-size: 20px;
+}
+p.light, h1.light {
+  color: rgb(16, 119, 255);
+  text-shadow: rgb(63, 63, 63) 0px 0px 5px;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  align-items: center;
+}
+
+.subheader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: transparent;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+button.light {
+  color: rgb(255, 255, 255);
+
+  background-color: rgb(0, 102, 255);
+  box-shadow:black 0px 0px 10px;
+}
+
+button:hover {
+
+  
+
+}
+@keyframes shake {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(-10px); }
+  40% { transform: translateY(0); }
+  60% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+@keyframes waddle {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(20px) rotate(10deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0);
+  }
+  75% {
+    transform: translateX(50vw) rotate(-10deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(0);
+  }
+}
+
+div.march {
+  animation: waddle 3s linear forwards;
+  animation-delay: 0s;
+
+}
+
+#minions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+  margin: auto;
+  margin-top: 100px;
+  width: 90%;
+}
+
+.minion {
+  /* Set the animation delay randomly */
+  animation-delay: 0s;
+}
+
+
+
+.shake {
+  animation: shake 0.6s infinite;
+
+}
+
+.d0 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: screen;
+
+  margin-inline: -50px;
+}
+
+.d1 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: screen;
+  margin-inline: -50px;
+}
+
+.d2 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: add;
+
+  margin-inline: -20px;
+  margin-left: -60px;
+
+}
+
+
+.d3 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: add;
+  margin-inline: -50px;
+  margin-left: -80px;
+}
+
+.d4 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: add;
+
+  margin-inline: -20px;
+  margin-left: -60px;
+
+}
+.d5 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck6.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: add;
+
+  margin-inline: -20px;
+  margin-left: -60px;
+}
+.d6 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck7.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: add;
+
+  margin-inline: -20px;
+  margin-left: -60px;
+
+}
+.d7 {
+  width: 200px;
+  height: 200px;
+  background-image: url(Ducks/duck8.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: -50px;
+  background-blend-mode: add;
+
+  margin-inline: -20px;
+  margin-left: -60px;
+
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#minions-container .light {
+  background-image: url(Ducks/angel.png);
+  width: 300px;
+  height: 300px;
+  animation: hover 1s ease-in-out infinite;
+
+}
