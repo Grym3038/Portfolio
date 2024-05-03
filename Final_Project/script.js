@@ -50,11 +50,7 @@ class LinkedList {
 const multiplyByTwo = num => num * 2;
 
 // User input/output example
-const input = prompt("Enter a number to add to the linked list:");
-const number = parseInt(input);
-
-// Display result in the HTML
-document.getElementById("output").textContent = `Added ${number} to the linked list`;
+const outputDiv = document.getElementById("output");
 
 // Linked list example
 const list = new LinkedList();
@@ -63,16 +59,24 @@ list.add(2);
 list.add(3);
 list.add(4);
 
-// Add user input to the linked list
-list.add(number);
+// Display linked list
+outputDiv.textContent = `Linked List: ${list.display()}`;
 
-// Search for a specific node
-const searchInput = prompt("Enter a number to search in the linked list:");
-const searchNumber = parseInt(searchInput);
-const found = list.search(searchNumber);
+// Add button event listeners
+document.getElementById("addButton").addEventListener("click", function() {
+    const input = prompt("Enter a number to add to the linked list:");
+    const number = parseInt(input);
+    list.add(number);
+    outputDiv.textContent = `Added ${number} to the linked list\nLinked List: ${list.display()}`;
+});
 
-if (found) {
-    document.getElementById("output").textContent += `\nFound ${searchNumber} in the linked list`;
-} else {
-    document.getElementById("output").textContent += `\n${searchNumber} not found in the linked list`;
-}
+document.getElementById("searchButton").addEventListener("click", function() {
+    const input = prompt("Enter a number to search in the linked list:");
+    const number = parseInt(input);
+    const found = list.search(number);
+    if (found) {
+        outputDiv.textContent = `${number} found in the linked list\nLinked List: ${list.display()}`;
+    } else {
+        outputDiv.textContent = `${number} not found in the linked list\nLinked List: ${list.display()}`;
+    }
+});
