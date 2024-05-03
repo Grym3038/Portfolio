@@ -63,3 +63,7 @@ li {
     border-radius: 5px;
     list-style-type: none;
 }
+
+li.highlight {
+    background-color: #ffffcc;
+}
