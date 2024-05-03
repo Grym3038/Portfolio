@@ -66,5 +66,5 @@ li {
 
 li.highlight {
     background-color: #e7e7e7;
-    outline: black;
+    border-color: black;
 }
