@@ -22,14 +22,6 @@ h1 {
     text-align: center;
 }
 
-.output {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
 .button {
     display: block;
     width: 100%;
@@ -49,12 +41,25 @@ h1 {
     background-color: #0056b3;
 }
 
-input[type="number"] {
-    width: 100%;
+input[type="text"] {
+    width: 70%;
     padding: 8px 12px;
     margin-top: 10px;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px 12px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
 }

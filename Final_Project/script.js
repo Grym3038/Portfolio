@@ -24,59 +24,66 @@ class LinkedList {
         }
     }
 
-    display() {
-        let current = this.head;
-        let output = "";
-        while (current) {
-            output += `${current.data} `;
-            current = current.next;
-        }
-        return output;
-    }
-
     search(data) {
         let current = this.head;
         while (current) {
-            if (current.data === data) {
+            if (current.data.toLowerCase() === data.toLowerCase()) {
                 return true;
             }
             current = current.next;
         }
         return false;
     }
+
+    display() {
+        let current = this.head;
+        let output = "";
+        while (current) {
+            output += `${current.data}\n`;
+            current = current.next;
+        }
+        return output;
+    }
 }
 
-// Arrow function example
-const multiplyByTwo = num => num * 2;
+const nameList = document.getElementById("nameList");
+const linkedList = new LinkedList();
 
-// User input/output example
-const outputDiv = document.getElementById("output");
+// Initial names in the linked list
+linkedList.add("Alice");
+linkedList.add("Bob");
+linkedList.add("Charlie");
+linkedList.add("David");
+linkedList.add("Eve");
 
-// Linked list example
-const list = new LinkedList();
-list.add(1);
-list.add(2);
-list.add(3);
-list.add(4);
+// Display initial list of names
+displayNames();
 
-// Display linked list
-outputDiv.textContent = `Linked List: ${list.display()}`;
-
-// Add button event listeners
-document.getElementById("addButton").addEventListener("click", function() {
-    const input = prompt("Enter a number to add to the linked list:");
-    const number = parseInt(input);
-    list.add(number);
-    outputDiv.textContent = `Added ${number} to the linked list\nLinked List: ${list.display()}`;
-});
-
+// Search button click event
 document.getElementById("searchButton").addEventListener("click", function() {
-    const input = prompt("Enter a number to search in the linked list:");
-    const number = parseInt(input);
-    const found = list.search(number);
-    if (found) {
-        outputDiv.textContent = `${number} found in the linked list\nLinked List: ${list.display()}`;
-    } else {
-        outputDiv.textContent = `${number} not found in the linked list\nLinked List: ${list.display()}`;
+    const searchInput = document.getElementById("searchInput").value.trim();
+    if (searchInput !== "") {
+        const found = linkedList.search(searchInput);
+        if (found) {
+            alert(`${searchInput} found in the linked list`);
+        } else {
+            alert(`${searchInput} not found in the linked list`);
+        }
+        document.getElementById("searchInput").value = "";
     }
 });
+
+// Add button click event
+document.getElementById("addButton").addEventListener("click", function() {
+    const newName = document.getElementById("addInput").value.trim();
+    if (newName !== "") {
+        linkedList.add(newName);
+        displayNames();
+        document.getElementById("addInput").value = "";
+    }
+});
+
+// Display names in the linked list
+function displayNames() {
+    nameList.textContent = linkedList.display();
+}
