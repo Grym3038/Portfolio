@@ -33,18 +33,28 @@ class LinkedList {
         }
         return output;
     }
+
+    search(data) {
+        let current = this.head;
+        while (current) {
+            if (current.data === data) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 }
 
 // Arrow function example
 const multiplyByTwo = num => num * 2;
 
 // User input/output example
-const input = prompt("Enter a number:");
+const input = prompt("Enter a number to add to the linked list:");
 const number = parseInt(input);
-const result = multiplyByTwo(number);
 
 // Display result in the HTML
-document.getElementById("output").textContent = `Result of doubling ${number} is ${result}`;
+document.getElementById("output").textContent = `Added ${number} to the linked list`;
 
 // Linked list example
 const list = new LinkedList();
@@ -53,4 +63,16 @@ list.add(2);
 list.add(3);
 list.add(4);
 
-document.getElementById("output").textContent += `\nLinked List: ${list.display()}`;
+// Add user input to the linked list
+list.add(number);
+
+// Search for a specific node
+const searchInput = prompt("Enter a number to search in the linked list:");
+const searchNumber = parseInt(searchInput);
+const found = list.search(searchNumber);
+
+if (found) {
+    document.getElementById("output").textContent += `\nFound ${searchNumber} in the linked list`;
+} else {
+    document.getElementById("output").textContent += `\n${searchNumber} not found in the linked list`;
+}
