@@ -35,11 +35,15 @@ class LinkedList {
         return false;
     }
 
-    display() {
+    display(searchTerm = "") {
         let current = this.head;
         let output = "";
         while (current) {
-            output += `${current.data}\n`;
+            let className = "";
+            if (searchTerm !== "" && current.data.toLowerCase().includes(searchTerm.toLowerCase())) {
+                className = "searched";
+            }
+            output += `<li class="${className}">${current.data}</li>`;
             current = current.next;
         }
         return output;
@@ -63,12 +67,7 @@ displayNames();
 document.getElementById("searchButton").addEventListener("click", function() {
     const searchInput = document.getElementById("searchInput").value.trim();
     if (searchInput !== "") {
-        const found = linkedList.search(searchInput);
-        if (found) {
-            alert(`${searchInput} found in the linked list`);
-        } else {
-            alert(`${searchInput} not found in the linked list`);
-        }
+        displayNames(searchInput);
         document.getElementById("searchInput").value = "";
     }
 });
@@ -84,6 +83,6 @@ document.getElementById("addButton").addEventListener("click", function() {
 });
 
 // Display names in the linked list
-function displayNames() {
-    nameList.textContent = linkedList.display();
+function displayNames(searchTerm = "") {
+    nameList.innerHTML = linkedList.display(searchTerm);
 }
