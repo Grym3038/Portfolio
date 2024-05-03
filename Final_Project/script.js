@@ -41,7 +41,7 @@ class LinkedList {
         while (current) {
             let className = "";
             if (searchTerm !== "" && current.data.toLowerCase().includes(searchTerm.toLowerCase())) {
-                className = "searched";
+                className = "highlight";
             }
             output += `<li class="${className}">${current.data}</li>`;
             current = current.next;
